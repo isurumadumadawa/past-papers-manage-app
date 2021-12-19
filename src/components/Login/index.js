@@ -20,7 +20,6 @@ import {
 export default Login = ({
   onPressLogin = () => {},
   onPressRegister = () => {},
-  onPressResetPassword = () => {},
   onChangeUserName = text => {},
   onchangePassword = text => {},
   header = 'Sign In',

@@ -30,54 +30,23 @@ export const Divider = styled.View`
 
 //Content Wrapper
 export const ContentWrapper = styled.View`
+  flex: 1;
   margin: 10px;
   padding: 20px;
   background-color: ${colors.content};
   border-radius: 20px;
 `;
 
-//Input Wrapper
-
-export const FeildWrapper = styled.View`
-  margin-bottom: 20px;
-`;
-
-export const Label = styled.Text`
-  color: ${colors.white};
-  font-size: 18px;
-  margin-bottom: 10px;
-`;
-
-export const MessageText = styled.Text`
-  color: ${colors.black};
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 5px;
-`;
-
-export const MessageSuccess = styled(MessageText)`
-  color: ${colors.success};
-`;
-
-export const MessageError = styled(MessageText)`
-  color: ${colors.error};
-`;
-
-//Input
-
-export const Input = styled.TextInput`
-  font-size: 20px;
-  font-weight: 300;
-  padding-bottom: 10px;
-  border-width: 1px;
-  border-radius: 10px;
-  border-color: ${colors.white};
-  color: ${colors.white};
+export const ScrollViewContent = styled.ScrollView`
+  flex: 1;
+  background-color: ${colors.content};
+  border-radius: 20px;
 `;
 
 //Button
 
 export const ButtonWrapper = styled.TouchableOpacity`
+  flex-direction: row;
   background-color: ${colors.primary};
   padding-vertical: 14px;
   border-radius: 6px;
@@ -86,18 +55,18 @@ export const ButtonWrapper = styled.TouchableOpacity`
   margin-vertical: 7px;
 `;
 
-export const ButtonWrapperOutline = styled(ButtonWrapper)`
-  background-color: transparent;
-  border-color: ${colors.primary};
-`;
-
 export const ButtonText = styled.Text`
   color: ${colors.white};
-  align-self: center;
+  margin-left: 20px;
   font-size: 18px;
   font-weight: 500;
 `;
 
-export const ButtonTextOutline = styled(ButtonText)`
-  color: ${colors.primary};
+export const Bullet = styled.View`
+  border-color: ${colors.white};
+  border-width: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  margin-left: 20px;
 `;
