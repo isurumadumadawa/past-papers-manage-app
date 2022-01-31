@@ -138,3 +138,14 @@ export const ButtonText = styled.Text`
 export const ButtonTextOutline = styled(ButtonText)`
   color: ${colors.primary};
 `;
+
+export const RowWContainerImage = styled.ScrollView`
+  flex-direction: row;
+`;
+
+export const UserImage = styled.Image`
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin: 10px;
+`;

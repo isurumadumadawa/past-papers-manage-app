@@ -21,6 +21,8 @@ import {
   GenderButtonWrapperOutline,
   ButtonText,
   ButtonTextOutline,
+  UserImage,
+  RowWContainerImage,
 } from './styles';
 
 export default Register = ({
@@ -31,7 +33,7 @@ export default Register = ({
   onChangeMobilrNumber = text => {},
   onchangePassword = text => {},
   onChangeConformPassword = text => {},
-  header = 'Sign Up',
+  header = 'Add User',
   userNameLabel = 'User Name',
   userNameMessage = '',
   userNameMessageType = '',
@@ -56,7 +58,10 @@ export default Register = ({
   mobileNumbePlaceholder = 'Enter Mobile Number',
   passwordPlaceholder = 'Enter Pasword',
   conformPasswordPlaceholder = 'Enter Password Again',
-  registerButtonText = 'SignUp',
+  registerButtonText = 'Add User',
+  userImageUrl = {
+    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjBeP9fTqK8Whnb5-spIqngvUWPCucMHZAcv9CPzte8nP-oWJ91FtSrOnzsgNiYOd-fao&usqp=CAU',
+  },
 }) => {
   return (
     <Screen>
@@ -106,61 +111,15 @@ export default Register = ({
         </FeildWrapper>
 
         <FeildWrapper>
-          <Label>{genderLabel}</Label>
-          {gender == genderValues.male && (
-            <RowWContainer>
-              <GenderButtonWrapper onPress={onPressGender(genderValues.male)}>
-                <ButtonText>{genderValues.male}</ButtonText>
-              </GenderButtonWrapper>
-              <GenderButtonWrapperOutline
-                onPress={onPressGender(genderValues.female)}>
-                <ButtonTextOutline>{genderValues.female}</ButtonTextOutline>
-              </GenderButtonWrapperOutline>
-            </RowWContainer>
-          )}
-          {gender == genderValues.female && (
-            <RowWContainer>
-              <GenderButtonWrapperOutline
-                onPress={onPressGender(genderValues.male)}>
-                <ButtonTextOutline>{genderValues.male}</ButtonTextOutline>
-              </GenderButtonWrapperOutline>
-              <GenderButtonWrapper onPress={onPressGender(genderValues.female)}>
-                <ButtonText>{genderValues.female}</ButtonText>
-              </GenderButtonWrapper>
-            </RowWContainer>
-          )}
-        </FeildWrapper>
-        <FeildWrapper>
-          <Label>{passwordLabel}</Label>
-          <Input
-            placeholder={passwordPlaceholder}
-            value={password}
-            placeholderTextColor={colors.white}
-            onChangeText={text => onchangePassword(text)}
-            secureTextEntry
-          />
-          {passwordMessageType == 'error' && (
-            <MessageError>{passwordMessage}</MessageError>
-          )}
-          {passwordMessageType == 'success' && (
-            <MessageSuccess>{passwordMessage}</MessageSuccess>
-          )}
-        </FeildWrapper>
-        <FeildWrapper>
-          <Label>{conformPasswordLabel}</Label>
-          <Input
-            placeholder={conformPasswordPlaceholder}
-            value={conformPassword}
-            placeholderTextColor={colors.white}
-            onChangeText={text => onChangeConformPassword(text)}
-            secureTextEntry
-          />
-          {conformPasswordMessageType == 'error' && (
-            <MessageError>{conformPasswordMessage}</MessageError>
-          )}
-          {conformPasswordMessageType == 'success' && (
-            <MessageSuccess>{conformPasswordMessage}</MessageSuccess>
-          )}
+          <Label>User Images</Label>
+
+          <RowWContainerImage horizontal showsHorizontalScrollIndicator={false}>
+            <UserImage source={userImageUrl} />
+            <UserImage source={userImageUrl} />
+            <UserImage source={userImageUrl} />
+            <UserImage source={userImageUrl} />
+            <UserImage source={userImageUrl} />
+          </RowWContainerImage>
         </FeildWrapper>
 
         <ButtonWrapper onPress={onPressRegister}>

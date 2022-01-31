@@ -152,6 +152,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+         release {
+      storeFile file('faceRec.keystore')
+      storePassword '33072@isuru'
+      keyAlias 'faceRec'
+      keyPassword '33072@isuru'
+    }
     }
     buildTypes {
         debug {

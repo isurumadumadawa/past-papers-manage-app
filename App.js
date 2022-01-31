@@ -7,45 +7,32 @@
  */
 
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Register from './src/components/Register';
-import Login from './src/components/Login';
+import LoginScreen from './src/screens/LoginScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
 import Select from './src/components/Select';
 import Paper from './src/components/Paper';
 import Result from './src/components/Result';
+import UserCard from './src/components/UserCard';
+import Header from './src/components/Header';
 
 const App = () => {
+  const Stack = createNativeStackNavigator();
   return (
-    <Login />
-    // <Register />
-    // <Select />
-    // <Paper
-    //   questionsData={[
-    //     {QuestionNumber: 1, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 2, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 3, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 4, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 5, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 6, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 7, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 8, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 9, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 10, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 11, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 12, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 13, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 14, answer: 3, selectedAnswer: ''},
-    //     {QuestionNumber: 15, answer: 3, selectedAnswer: ''},
-    //   ]}
-    // />
-    // <Result
-    //   data={[
-    //     {subjectName: 'Fundementals', presentage: 37},
-    //     {subjectName: 'Interduction', presentage: 67},
-    //     {subjectName: 'Fundementals', presentage: 37},
-    //     {subjectName: 'Fundementals', presentage: 37},
-    //   ]}
-    // />
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Register" component={RegisterScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

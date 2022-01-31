@@ -75,9 +75,9 @@ export default Login = ({
         <ButtonWrapper onPress={onPressLogin}>
           <ButtonText>{loginButtonText}</ButtonText>
         </ButtonWrapper>
-        <ButtonWrapperOutline onPress={onPressRegister}>
+        {/* <ButtonWrapperOutline onPress={onPressRegister}>
           <ButtonTextOutline>{registerButtonText}</ButtonTextOutline>
-        </ButtonWrapperOutline>
+        </ButtonWrapperOutline> */}
       </ContentWrapper>
     </Screen>
   );
